@@ -13,7 +13,10 @@ class _ShadyMapState extends State<ShadyMap> {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new FlutterMap(
-        options: new MapOptions(minZoom: 10.0),
+        options: new MapOptions(
+          minZoom: 10.0,
+          center: new LatLng(21.257040, 81.579147),
+        ),
         layers: [
           new TileLayerOptions(
               urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",

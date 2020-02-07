@@ -7,7 +7,7 @@ class ShadyGridView extends StatelessWidget {
     queryData = MediaQuery.of(context);
     return Container(
       width: queryData.size.width,
-      height: queryData.size.height * 0.25,
+      height: queryData.size.height * 0.23,
       child: GridView.count(
         primary: false,
         padding: const EdgeInsets.all(20),
