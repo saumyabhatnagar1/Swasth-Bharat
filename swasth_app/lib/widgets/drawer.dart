@@ -6,6 +6,19 @@ class ShadyDrawer extends StatelessWidget {
     return Card(
       child: ListView(
         children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("Aadarsh Patel"),
+            accountEmail: Text("aadarsh18100@iiitnr.edu.in"),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Theme.of(context).platform == TargetPlatform.iOS
+                  ? Colors.blue
+                  : Colors.white,
+              child: Text(
+                "A",
+                style: TextStyle(fontSize: 40.0),
+              ),
+            ),
+          ),
           ListTile(
             leading: Icon(Icons.healing),
             title: Text('Doctor'),

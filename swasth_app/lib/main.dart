@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           title: Text('Swasth Bharat'),
         ),
         drawer: SizedBox(
-          width: 250,
+          width: 275,
           child: ShadyDrawer(),
         ),
         body: HomePage(),
