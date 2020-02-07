@@ -8,8 +8,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
           width: 275,
           child: ShadyDrawer(),
         ),
-        body: HomePage(),
+        body: SingleChildScrollView(child: HomePage()),
       ),
     );
   }
