@@ -75,17 +75,19 @@ app.post('/uploads',(req,res)=>{
          res.send('error')   
         }
         else{
-            console.log(req.file);
-            res.send('test')
+            res.render('uploads',{
+                msg:'FIle uploaded',
+                file:'/uploads${req.file.filename}'
+            })
         }
     })
 })
 
-app.post('/display',(req,res)=>{
-    const image =Image.find({});
-    res.send(image)
-
+app.get('/feedback',(req,res)=>{
+    res.render('feedback'); 
 })
+
+
 app.get('/main',(req,res)=>{
     res.render('main_page')
 })
