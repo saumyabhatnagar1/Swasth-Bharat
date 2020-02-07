@@ -20,7 +20,7 @@ router.post ('/bed-wheel-inc',async (req,res)=>{
         const quan=await Quan.findById('5e395863d6cf0b10e46bb5a2');
         quan.bed++;
         await quan.save();
-        res.send(quan);
+        res.redirect('/bed-server')
     }
     catch(e)
     {
@@ -33,7 +33,7 @@ router.post('/bed-wheel-dec',async (req,res)=>{
         const quan=await Quan.findById('5e395863d6cf0b10e46bb5a2');
         quan.bed--;
         await quan.save();
-        res.send(quan);
+        res.redirect('/bed-server');
 
     }
     catch(e)
@@ -46,7 +46,7 @@ router.post('/wheel-inc',async(req,res)=>{
         const quan =await Quan.findById('5e395863d6cf0b10e46bb5a2');
         quan.wheelchair++;
         await quan.save();
-        res.send(quan);
+        res.redirect('/bed-server')
     }
     catch(e)
     {
@@ -59,7 +59,7 @@ router.post('/wheel-dec',async(req,res)=>{
         const quan =await Quan.findById('5e395863d6cf0b10e46bb5a2');
         quan.wheelchair--;
         await quan.save();
-        res.send(quan);
+        res.redirect('/bed-server')
     }
     catch(e)
     {

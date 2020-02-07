@@ -6,6 +6,18 @@ mongoose.connect('mongodb://127.0.0.1:27017/sih-main',{
     useUnifiedTopology:true,
     useFindAndModify:false,
 })
+const Image =mongoose.model('Image',{
+    image:{
+        type:Buffer,
+    },
+    name:{
+        type:String
+    }
+
+})
+Image.create({},function(err,returnimg){
+    console.log(returnimg.image)
+})
 
 // const Doctor=mongoose.model('Doctor',{
 //     name:{
@@ -82,7 +94,15 @@ mongoose.connect('mongodb://127.0.0.1:27017/sih-main',{
 // }).catch((e)=>{
 //     console.log(e)
 // })
-
+// const eight=new Doctor({
+//     name:'Dr. Soniya Singh',
+//     available:'no'
+// })
+// eight.save().then(()=>{
+//     console.log('created')
+// }).catch((e)=>{
+//     console.log(e);
+// })
 
  
 

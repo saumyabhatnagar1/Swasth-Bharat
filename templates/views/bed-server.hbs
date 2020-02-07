@@ -1,10 +1,11 @@
 <head>
 
 </head>
-<body>
-    <table>
+<body  style="background-image: url('http://cleancarelinen.com/wp-content/uploads/2018/03/history-of-the-hospital-bed.jpg');">
+    <table style="border: solid; margin-left: 25%; margin-top: 10%; background-color: #F1F9C6" cellpadding="30" cellspacing="15" >
         <tr>
-            <td>Number of beds</td>
+            <td><b>NUMBER OF BEDS:</b></td>
+            <td><b> {{numbed}}</b></td>
             <td><form method="POST" action="/bed-wheel-inc">
             <button type="submit"> Increase</button></form></td>
             <td>
@@ -14,7 +15,8 @@
                 </button></form>
             </td>
         </tr>
-        <td>NUmber of wheelchairs</td>
+        <td><b>NUMBER OF WHEELCHAIRS:</b></td>
+        <td><b>{{numwheel}}</b></td>
         <td>
             <form method="POST" action="/wheel-inc">
             <button type="submit">Increase</button>

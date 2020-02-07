@@ -11,7 +11,7 @@ router.post('/doctors-change-no/:id',async (req,res)=>{
     
         doctor.available='no'
         await doctor.save();
-        res.send()
+        res.redirect('/doctor')
         
     }
     catch(e)
@@ -27,7 +27,7 @@ router.post('/doctors-change-yes/:id',async (req,res)=>{
         const doctor=await Doctor.findById(req.params.id)
         doctor.available='yes'
         await doctor.save();
-        res.send()
+       res.direct('/doctor')
       
       
     }

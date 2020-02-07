@@ -4,6 +4,7 @@ const app=express();
 const path=require('path');
 const hbs=require('hbs');
 const multer=require('multer');
+
 const storage =multer.diskStorage({destination:'./public/uploads/',
 filename:function(req,file,callback){
 callback(null,file.fieldname+'-'+Date.now()+path.extname(file.originalname))
@@ -45,25 +46,43 @@ app.get('/view', async function(req, res){
 });
 
 
+
+
+app.get('/doctor-client',async(req,res)=>{
+    const doctor1=await Doctor.findById('5e3b2559eeed0c45ec674a2f')
+    
+    const doctor2=await Doctor.findById('5e3dc4bc4665293254cbe67a')
+    const doctor3=await Doctor.findById('5e3dc4bc4665293254cbe679')
+    const doctor4=await Doctor.findById('5e3dc4bc4665293254cbe67c')
+    const doctor5=await Doctor.findById('5e3dc4bc4665293254cbe67b')
+    const doctor6=await Doctor.findById('5e3dc4bc4665293254cbe678')
+    const doctor7=await Doctor.findById('5e3dc4bc4665293254cbe67d')
+    const doctor8=await Doctor.findById('5e3de2c308db0a04c8810171')
+    res.render('doctor-client',{status1:doctor1.available,
+    status2:doctor2.available,
+    
+status3:doctor3.available,
+status4:doctor4.available,
+status5:doctor5.available,
+status6:doctor6.available,
+status7:doctor7.available,
+status8:doctor8.available});
+});
+
+
 app.get('/doctor',async(req,res)=>{
     const doctor=await Doctor.findById('5e3b2559eeed0c45ec674a2f')
     console.log(doctor.available)
     
     res.render('doctor',{status:doctor.available});
 })
-
-app.get('/doctor-client',async(req,res)=>{
-    const doctor=await Doctor.findById('5e3b2559eeed0c45ec674a2f')
-    console.log(doctor.available)
-    
-    res.render('doctor-client',{name:doctor.name,status:doctor.available});
-})
 app.get('/bed-server',async(req,res)=>{
-    res.render('bed-server');
+    const quan=await Quan.findById('5e395863d6cf0b10e46bb5a2');
+    res.render('bed-server',{numbed:quan.bed,numwheel:quan.wheelchair});
 })
 app.get('/bed',async(req,res)=>{
     const quan=await Quan.findById('5e395863d6cf0b10e46bb5a2');
-    res.render('bed',{beds:quan.bed,wheels:quan.wheelchair})
+    res.render('bed-wheel',{beds:quan.bed,wheels:quan.wheelchair})
 
 })
 app.get('/upload',(req,res)=>{
@@ -82,7 +101,9 @@ app.post('/uploads',(req,res)=>{
         }
     })
 })
-
+app.post('/upload2',(req,res)=>{
+    
+})
 app.get('/feedback',(req,res)=>{
     res.render('feedback'); 
 })
