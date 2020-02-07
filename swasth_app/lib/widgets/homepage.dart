@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
 import 'package:swasth_app/widgets/grid_view.dart';
+import 'package:swasth_app/widgets/map.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     MediaQueryData queryData;
@@ -48,8 +54,16 @@ class HomePage extends StatelessWidget {
           ]),
         ),
         ShadyGridView(),
-        Card(child: Image.asset('assets/map.jpg'),),
-        Chip(label: Text('Made by CodeBlack'),),
+        Container(
+          width: 200,
+          height: 200,
+          child: Card(
+            child: ShadyMap(),
+          ),
+        ),
+        Chip(
+          label: Text('Made by CodeBlack'),
+        ),
       ],
     );
   }
