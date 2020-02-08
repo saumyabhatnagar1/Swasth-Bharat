@@ -1,19 +1,142 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Doctor Current Status</title>
+    <title>Doctor_server</title>
+<style>
+
+table{
+    width:600px;
+    background-color:#F1F9C6;
+    border: 5px solid black;
+    margin-top: 100px;
+}
+
+th{
+    font-size: 20px;
+    border-bottom:5px solid black;
+}
+
+td{
+    height: 30px;
+    padding-left: 5px;
+    text-align: center;
+}
+td.Doctor{
+    text-align: left;
+}
+</style>
 </head>
-<body>
-    <table border="1">
-        <td>
-            <form method="POST" action="/doctors-change-no/5e3b2559eeed0c45ec674a2f">
-            <button type="submit">no</button></form>
-        </td>
-         <td>
-            <form method="POST" action="/doctors-change-yes/5e3b2559eeed0c45ec674a2f">
-            <button type="submit">yes</button></form>
-        </td>
-        <td>
-            {{status}}
-        </td>
+<body  style="background-image: url('http://cleancarelinen.com/wp-content/uploads/2018/03/history-of-the-hospital-bed.jpg');">
+    <center>
+    <table>
+        <tr>
+            <th>DOCTOR</th>
+            <th>CURRENT STATUS</th>
+            <th colspan="2">AVAILABILITY</th>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Sanjeev Jain:</b></td>
+            <td><b>{{status1}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3b2559eeed0c45ec674a2f">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3b2559eeed0c45ec674a2f">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Anurag Triphati:</b></td>
+            <td><b>{{status2}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3dc4bc4665293254cbe67a">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3dc4bc4665293254cbe67a">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Santosh Tyagi:</b></td>
+            <td><b>{{status3}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3dc4bc4665293254cbe679">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3dc4bc4665293254cbe679">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Feroz Shah:</b></td>
+            <td><b>{{status4}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3dc4bc4665293254cbe67c">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3dc4bc4665293254cbe67c ">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Hardik Sharma:</b></td>
+            <td><b>{{status5}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3dc4bc4665293254cbe67b">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3dc4bc4665293254cbe67b">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Rahul Arora:</b></td>
+            <td><b>{{status6}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3dc4bc4665293254cbe678">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3dc4bc4665293254cbe678">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+
+        <tr>
+            <td class = "Doctor"><b>Dr. Vivek Goyal:</b></td>
+            <td><b>{{status7}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3dc4bc4665293254cbe67d">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3dc4bc4665293254cbe67d">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
+        <tr>
+            <td class = "Doctor"><b>Dr. Soniya Singh:</b></td>
+            <td><b>{{status8}}</b></td>
+            <td><form method="POST" action="/doctors-change-yes/5e3de2c308db0a04c8810171">
+            <button type="submit"> Yes</button></form></td>
+            <td>
+                <form method="POST" action="/doctors-change-no/5e3de2c308db0a04c8810171">
+                <button type="submit">No
+
+                </button></form>
+            </td>
+        </tr>
     </table>
-   
+</center>
 </body>

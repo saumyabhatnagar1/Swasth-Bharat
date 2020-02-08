@@ -27,7 +27,7 @@ router.post('/doctors-change-yes/:id',async (req,res)=>{
         const doctor=await Doctor.findById(req.params.id)
         doctor.available='yes'
         await doctor.save();
-       res.direct('/doctor')
+       res.redirect('/doctor')
       
       
     }

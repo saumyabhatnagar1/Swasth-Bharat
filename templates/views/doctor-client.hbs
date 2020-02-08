@@ -1,35 +1,95 @@
+<!DOCTYPE html>
+<html>
 <head>
-
+<title>Doctors_client</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style>
-.newspaper {
- 
-  colum<n-gap: 200px;
-}
+
  tr:hover {
-  background-color: #ab0f24;
+  background-color: green;
+  color:white;
 }
+body{
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+table{
+  border:5px solid black;
+  background-color: #F1F9C6;
+  width:500px;
+}
+
+td,th{
+  height:50px;
+  padding-left:5px;
+}
+
 </style>
 </head>
-<body style="text-align:center;background-image:url('http://cleancarelinen.com/wp-content/uploads/2018/03/history-of-the-hospital-bed.jpg'); ">
 
-<div class='newspaper' id ='div1'>
-    <table cellpadding="20"style="    margin-left:30%;
-    margin-right:15%;  border: 5px solid; border-collapse: collapse;background-color: #F1F9C6">
-    <b>
-    <tr style="border-bottom: solid;">
-    <td> <b>DOCTOR </b></td>
-    <td> <b>Phone Number </b></td>
-    <td> <b>Status</b> </td>
+
+<body style="text-align:center;background-image: url('http://cleancarelinen.com/wp-content/uploads/2018/03/history-of-the-hospital-bed.jpg'); ">
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Current bed status</a></li>
+
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Government Schemes
+        <span class = "caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Scheme 1</a></li>
+          <li><a href="#">Scheme 2</a></li>
+          <li><a href="#">Scheme 3</a></li>
+        </ul>
+      </li>
+
+
+      <li><a href="#">Pharmacy</a></li>
+      <li><a href="#">Appointment</a></li>
+      <li><a href="#">Report Collection</a></li>
+      <li><a href="#">Feedback</a></li>
+
+    </ul>
+    <form class="navbar-form navbar-right" action="/action_page.php" style="float:right">
+      <div class="input-group">
+        <input style ="float:right; width:100px"type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" style ="width:50px" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<center>
+  <table >
+
+    <tr style="border-bottom: solid black;">
+    <th> DOCTOR </th>
+    <th> PHONE </th>
+    <th> STATUS </th>
     </tr>
         <tr>
             <td style="">Dr. Sanjeev Jain</td>
             <td style="">9893536560 </td>
             <td>{{status1}}</td>
         </tr>
-        <tr></tr>
-        <tr></tr>
+       
         <tr>
-        <td style="">Dr. Rahul Arora </td>
+        <td style="">Dr. Anurag Triphati </td>
             <td style="">9425556030</td>
              <td>{{status2}}</td>
         </tr>
@@ -43,44 +103,38 @@
          <tr></tr>
            <tr></tr>
          <tr>
-        <td style="">Dr. Anurag tripathi </td>
+        <td style="">Dr. Feroz Shah </td>
             <td style="">2825556030</td>
              <td>{{status4}}</td>
         </tr>
          <tr></tr>
            <tr></tr>
             <tr>
-        <td style="">Dr. hardik sharma </td>
+        <td style="">Dr. Hardik Sharma </td>
             <td style="">9025556030</td>
              <td>{{status5}}</td>
         </tr>
          <tr></tr>
            <tr></tr>
             <tr>
-        <td style="">Dr. Feroz shah </td>
+        <td style="">Dr. Rahul Arora </td>
             <td style="">9425556048</td>
              <td>{{status6}}</td>
         </tr>
          <tr></tr>
            <tr></tr>
             <tr>
-        <td style="">Dr. Vivek goyal</td>
+        <td style="">Dr. Vivek Goyal</td>
             <td style="">9425556039</td>
              <td>{{status7}}</td>
         </tr>
         <tr></tr>
         <tr>
-            <td>
-                Dr. Soniya Singh
-            </td>
-            <td>9812340981</td>
+            <td>Dr. Soniya Singh</td>
+            <td>98211234181</td>
             <td>{{status8}}</td>
         </tr>
-         <tr></tr>
-           <tr></tr>
-       </b>
     </table>
-</div>
-
+  </center>
 </body>
-
+</html>

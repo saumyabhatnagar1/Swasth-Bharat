@@ -50,7 +50,6 @@ app.get('/view', async function(req, res){
 
 app.get('/doctor-client',async(req,res)=>{
     const doctor1=await Doctor.findById('5e3b2559eeed0c45ec674a2f')
-    
     const doctor2=await Doctor.findById('5e3dc4bc4665293254cbe67a')
     const doctor3=await Doctor.findById('5e3dc4bc4665293254cbe679')
     const doctor4=await Doctor.findById('5e3dc4bc4665293254cbe67c')
@@ -71,10 +70,23 @@ status8:doctor8.available});
 
 
 app.get('/doctor',async(req,res)=>{
-    const doctor=await Doctor.findById('5e3b2559eeed0c45ec674a2f')
-    console.log(doctor.available)
+    const doctor1=await Doctor.findById('5e3b2559eeed0c45ec674a2f')
+    const doctor2=await Doctor.findById('5e3dc4bc4665293254cbe67a')
+    const doctor3=await Doctor.findById('5e3dc4bc4665293254cbe679')
+    const doctor4=await Doctor.findById('5e3dc4bc4665293254cbe67c')
+    const doctor5=await Doctor.findById('5e3dc4bc4665293254cbe67b')
+    const doctor6=await Doctor.findById('5e3dc4bc4665293254cbe678')
+    const doctor7=await Doctor.findById('5e3dc4bc4665293254cbe67d')
+    const doctor8=await Doctor.findById('5e3de2c308db0a04c8810171')
+    res.render('doctor',{status1:doctor1.available,
+    status2:doctor2.available,
     
-    res.render('doctor',{status:doctor.available});
+status3:doctor3.available,
+status4:doctor4.available,
+status5:doctor5.available,
+status6:doctor6.available,
+status7:doctor7.available,
+status8:doctor8.available});
 })
 app.get('/bed-server',async(req,res)=>{
     const quan=await Quan.findById('5e395863d6cf0b10e46bb5a2');
