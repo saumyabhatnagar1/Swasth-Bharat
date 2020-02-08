@@ -16,6 +16,7 @@ class _HomePageState extends State<HomePage> {
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround, 
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Center(
@@ -55,8 +56,9 @@ class _HomePageState extends State<HomePage> {
         ),
         ShadyGridView(),
         Container(
+          padding: EdgeInsets.all(10.0),
           width: queryData.size.width,
-          height: queryData.size.height*0.50,
+          height: queryData.size.height * 0.50,
           child: Card(
             child: ShadyMap(),
           ),

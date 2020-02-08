@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:swasth_app/widgets/doctor.dart';
+
 class ShadyGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,25 +17,33 @@ class ShadyGridView extends StatelessWidget {
         mainAxisSpacing: 10,
         crossAxisCount: 3,
         children: <Widget>[
-          Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(
-                  Icons.search,
-                  size: 50,
-                ),
-                const Text(
-                  'Search Doctors',
-                  style: TextStyle(
-                    fontSize: 18.0,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ShadyDoctor()),
+              );
+            },
+            child: Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.search,
+                    size: 50,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-              ],
+                  const Text(
+                    'Search Doctors',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              color: Colors.teal[100],
             ),
-            color: Colors.teal[100],
           ),
           Card(
             child: Column(

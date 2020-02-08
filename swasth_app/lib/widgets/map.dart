@@ -14,7 +14,7 @@ class _ShadyMapState extends State<ShadyMap> {
     return new Scaffold(
       body: new FlutterMap(
         options: new MapOptions(
-          minZoom: 10.0,
+          minZoom: 15.0,
           center: new LatLng(21.257040, 81.579147),
         ),
         layers: [
