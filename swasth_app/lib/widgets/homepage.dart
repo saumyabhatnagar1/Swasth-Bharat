@@ -55,8 +55,8 @@ class _HomePageState extends State<HomePage> {
         ),
         ShadyGridView(),
         Container(
-          width: 200,
-          height: 200,
+          width: queryData.size.width,
+          height: queryData.size.height*0.50,
           child: Card(
             child: ShadyMap(),
           ),
