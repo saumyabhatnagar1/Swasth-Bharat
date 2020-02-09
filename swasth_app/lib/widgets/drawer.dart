@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:swasth_app/widgets/doctor.dart';
 
 class ShadyDrawer extends StatelessWidget {
   @override
@@ -23,6 +24,12 @@ class ShadyDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.healing),
             title: Text('Doctor'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ShadyDoctor()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.airline_seat_flat_angled),

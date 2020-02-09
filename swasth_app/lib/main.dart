@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:swasth_app/widgets/drawer.dart';
 import 'package:swasth_app/widgets/homepage.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+      home: MyApp(),
+      debugShowCheckedModeBanner: false,
+    ));
 
 class MyApp extends StatelessWidget {
   @override
