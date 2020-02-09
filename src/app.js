@@ -100,7 +100,7 @@ app.get('/bed',async(req,res)=>{
 app.get('/upload',(req,res)=>{
     res.render('uploads')
 })
-app.post('/uploads',(req,res)=>{
+app.post('/uploads ',(req,res)=>{
     upload(req,res,(err)=>{
         if(err){
          res.send('error')   

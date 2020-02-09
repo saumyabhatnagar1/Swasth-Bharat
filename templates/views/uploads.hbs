@@ -1,8 +1,55 @@
 <head>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File Upload</title>
+  <!-- <link rel="icon" href="http://mapmyindia.com/images/favicon.ico" type="image/x-icon"> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="LandingPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="d0266271-9df0-4fb9-90e2-218e86846331" ></script>
 </head>
 <body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/main">Home</a></li>
+      <li><a href="/bed">Current bed status</a></li>
+
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Government Schemes
+        <span class = "caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a  target="_blank"   href="https://www.nhp.gov.in/national-health-insurance-schemes_pg">Rashtiya Swasthiya Bima Yojana (RSBY)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Employment State Insurance Scheme (ESIS)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Central Government Health Scheme (CGHS)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Aam Aadmi Bima Yojana (AABY)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Janashree Bima Yojana (JBY)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Universal Health Insurance Scheme (UHIS)</a></li>
+        </ul>
+      </li>
+
+
+      <li><a href="#">Pharmacy</a></li>
+      <li><a href="/doctor-client">Status of Doctors</a></li>
+      <li><a href="/upload">Report Collection</a></li>
+      <li><a href="#">Feedback</a></li>
+
+    </ul>
+    <form class="navbar-form navbar-right" action="/action_page.php" style="float:right">
+      <div class="input-group">
+        <input style ="float:right; width:100px"type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" style ="width:50px" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
 <div class="container">
     <h1>File upload</h1>
     <form action="/uploads" method="POST" enctype="multipart/form-data">
@@ -17,7 +64,7 @@
     </div>
   <button type="submit" class="btn">Submit</button>
   </form>
-  <img src="<script>typeof file !='undefined'? file: ''</script>" class="img-responsive">
+  
 
 </div>
 

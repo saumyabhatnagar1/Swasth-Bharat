@@ -2,34 +2,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml"lang="en" xml:lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>App Name</title>
-  <!-- <link rel="icon" href="http://mapmyindia.com/images/favicon.ico" type="image/x-icon"> -->
+  <title>Swasth Bharat</title>
+  <link rel="icon" href="http://mapmyindia.com/images/favicon.ico" type="image/x-icon">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="LandingPage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="d0266271-9df0-4fb9-90e2-218e86846331" ></script>
+  <script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="d0266271-9df0-4fb9-90e2-218e86846331" ></script>
   <style type="text/css">
-      html { height: 100%; padding-top: 0; margin-top: 0}
-      body { height: 100%;font-family:Verdana,sans-serif, Arial;color:#000;margin: 0; font-size:14px; padding: 0; }
-       #map {
-          position: static;
-          bottom: 0;
-          left: 0;
-          margin: 5px 1px;
-          box-shadow: 5px 7.5px lightgrey;
-          border: 2px solid black; }
-      #result {
-          position: sticky;
-          left: 2px; top: 46px;
-          width: 306px;
-          bottom: 2px;
-          border: 1px solid #cccccc;
-          background-color: #FAFAFA;
-          overflow: auto;
-      }
+      html { height: 100%;}
+      body { height: 100%;font-family:Verdana,sans-serif, Arial;color:#000;margin: 0; font-size:14px; padding: 0;}
+      #map {
+         position: static;
+         bottom:0;
+         border: 1px solid #cccccc; }
+     #result {
+         position: absolute;
+         left: 2px; top: 46px;
+         width: 306px;
+         bottom: 2px;
+         border: 1px solid #cccccc;
+         background-color: #FAFAFA;
+         overflow: auto;
+     }
+       button{width: 220px;font-family:Verdana,sans-serif, Arial;font-size:12px;padding:2px 0;color:#333}
        button{width: 220px;font-family:Verdana,sans-serif, Arial;font-size:12px;padding:2px 0;color:#333}
        * {box-sizing:border-box}
 
@@ -60,14 +58,14 @@
 .checked {
   color: orange;
 }
+
   </style>
 
 
   <link rel="stylesheet" href="css/leaflet.css" />
   <!--put your map api javascript url with key here-->
-   <script src="https://apis.mapmyindia.com/advancedmaps/v1/csxdykjqn85ktznrg2xsgi8wcfgn9erk/map_load?v=1.3"></script>
-
-   <script>
+  <script src="https://apis.mapmyindia.com/advancedmaps/v1/csxdykjqn85ktznrg2xsgi8wcfgn9erk/map_load?v=1.3"></script>
+  <script>
       var map = null;
       window.onload = function() {
 
@@ -100,6 +98,7 @@
           });
       };
   </script>
+  </script>
 </head>
 
 <body>
@@ -120,16 +119,19 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Government Schemes
         <span class = "caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Scheme 1</a></li>
-          <li><a href="#">Scheme 2</a></li>
-          <li><a href="#">Scheme 3</a></li>
+          <li><a  target="_blank"   href="https://www.nhp.gov.in/national-health-insurance-schemes_pg">Rashtiya Swasthiya Bima Yojana (RSBY)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Employment State Insurance Scheme (ESIS)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Central Government Health Scheme (CGHS)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Aam Aadmi Bima Yojana (AABY)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Janashree Bima Yojana (JBY)</a></li>
+          <li><a href="https://www.nhp.gov.in/national-health-insurance-schemes_pg" target="_blank">Universal Health Insurance Scheme (UHIS)</a></li>
         </ul>
       </li>
 
 
       <li><a href="#">Pharmacy</a></li>
-      <li><a href="/doctor-client">Doctor Status</a></li>
-      <li><a href="/uploads">Report Collection</a></li>
+      <li><a href="/doctor-client">Status of Doctors</a></li>
+      <li><a href="/upload">Report Collection</a></li>
       <li><a href="#">Feedback</a></li>
 
     </ul>
@@ -145,6 +147,7 @@
     </form>
   </div>
 </nav>
+
 
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -183,7 +186,7 @@
 </div>
 
 <div class = "container" style = "padding-top:100px">
-  <div class="panel panel-success" style="height:600px">
+  <div class="panel panel-success" style="height:400px;">
   <div class="panel-heading" style="height:100px"><a href="http://www.aiimsraipur.edu.in/hindi/"><h1>AIIMS RAIPUR</h1></a></div>
   <div class="panel-body">
     <span class="heading">User Rating</span>
@@ -196,6 +199,11 @@
     <hr style="border:3px solid #f1f1f1">
 
     <p><span class="glyphicon glyphicon-user"></span>    Good place of Healthcare facility by Central Govt.Institute. Established under PMSSY</p>
+    <p><span class="glyphicon glyphicon-user"></span>    Best doctor team, low cost medicines,team work great.</p>
+    <p><span class="glyphicon glyphicon-user"></span>    AIIMS Raipur used to be good but now the management is hell bent on making patients and their relatives suffer. Officials send people from counter to counter to make their whole day go waste. Here doctor's are very good and treatment is excellent. But what's the point when you can't reach the doctors</p>
+    <p><span class="glyphicon glyphicon-user"></span>    Neat and clean place...well maintained by govt.</p>
+
+
   </div>
 </div>
 </div>
