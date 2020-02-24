@@ -1,16 +1,12 @@
 # swasth_app
 
-A new Flutter project.
+An app created by CodeBlack_ Team for Smart India Hackathon 2020.
 
-## Getting Started
+![alt text](https://github.com/saumyabhatnagar1/Swasth-Bharat/blob/master/swasth_app/assets/pretty%20cool.gif)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## CodeBlack_ Team
++ Aadarsh Patel
++ Saumya Bhatnagar
++ Arpit Bharadwaj
++ Mayank Goyal
++ Soniya Seervi
